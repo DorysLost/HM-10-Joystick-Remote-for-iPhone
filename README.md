@@ -22,7 +22,7 @@ Diagonal movement combines bits: forward-left = `0x05`, forward-right = `0x06`, 
 1. Install **Bluefy – Web BLE Browser** from the iOS App Store.
 2. Enable Bluetooth on the iPhone. 
 3. Open **Bluefy**, enter this HTTPS GitHub Pages URL to load the joystick webpage:
-   https://eigenpi.github.io/HM-10-Joystick-Remote-for-iPhone/index.html 
+   https://DorysLost.github.io/HM-10-Joystick-Remote-for-iPhone/index.html 
 
 ## Credits
 
