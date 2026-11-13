@@ -102,17 +102,14 @@ $('headlights').textContent =
     headlightsOn ? 'Headlights ON' : 'Headlights OFF';
   updateDisplay();
 });
-$('horn').addEventListener('pointerdown', () => {
-  hornOn = !hornOn; //toggles horn
+$('horn').addEventListener('click', () => {
+  hornOn = !hornOn; // toggles horn ON/OFF
+
+  $('horn').textContent =
+    hornOn ? 'Horn ON' : 'Horn OFF';
+
   updateDisplay();
 });
-function releaseHorn() {
-  hornOn = false;
-  updateDisplay();
-}
-$('horn').addEventListener('pointerup', releaseHorn);
-$('horn').addEventListener('pointercancel', releaseHorn);
-$('horn').addEventListener('lostpointercapture', releaseHorn);
 $('test').addEventListener('click', () => { log(`Encoding check: F=0x${encode(0,-1).toString(16)}, B=0x${encode(0,1).toString(16)}, L=0x${encode(1,0).toString(16)}, R=0x${encode(-1,0).toString(16)}, F+L=0x${encode(1,-1).toString(16)}`); });
 function stopTimer() { if (timer !== null) { clearInterval(timer); timer = null; } }
 function disconnected() { stopTimer(); characteristic = null; writeBusy = false; center(); setStatus('Disconnected', false); log('BLE disconnected. Receiver must fail safe to STOP.'); }
