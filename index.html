@@ -26,6 +26,7 @@
 <div class="controls">
   <button id="headlights"> Headlights OFF</button>
   <button id="horn"> Sound Horn</button>
+</div>
 </section>
 <section class="panel"><div class="settings"><label for="deadzone">Center dead zone</label><strong id="deadzoneValue">20%</strong></div><input id="deadzone" type="range" min="5" max="40" value="20" step="5"><p class="note">Small movements inside the dead zone are treated as centered. Diagonal commands combine two bits.</p><div class="controls"><button id="test" class="secondary">Test encoding (no BLE)</button><button id="stop" class="secondary">STOP now</button></div><pre id="log" aria-live="polite"></pre></section>
 <p class="note">Safety: The receiver must independently stop motors if no valid command arrives within approximately 300–500 ms. Browser disconnects and phone sleep can prevent STOP from reaching the receiver.</p>
