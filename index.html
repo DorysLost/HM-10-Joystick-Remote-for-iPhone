@@ -103,7 +103,7 @@ $('headlights').textContent =
   updateDisplay();
 });
 $('horn').addEventListener('pointerdown', () => {
-  hornOn = true; //press and hold the horn button
+  hornOn = !hornOn; //toggles horn
   updateDisplay();
 });
 function releaseHorn() {
